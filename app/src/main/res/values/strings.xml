@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">OTA Example</string>
+    <string name="app_name">Phrase Lokalise Example</string>
     <string name="hello_world">Hello World</string>
     <string name="app_subtitle">from strings.xml</string>
+
+    <string name="lokalise_sdk_token">ACCESS_TOKEN</string>
+    <string name="lokalise_project_id">PROJECT_ID</string>
+
 </resources>

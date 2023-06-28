@@ -1,19 +1,33 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "dev.jamescullimore.phrase_lokalise_example"
     compileSdkVersion 33
     defaultConfig {
-        applicationId "com.phrase.example"
+        applicationId "dev.jamescullimore.phrase_lokalise_example"
         minSdkVersion 15
         targetSdkVersion 33
         versionCode 5
-        versionName "2.0.0"
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        phrase {
+            dimension "version"
+            applicationIdSuffix ".phrase"
+            versionNameSuffix "-phrase"
+        }
+        lokalise {
+            dimension "version"
+            applicationIdSuffix ".lokalise"
+            versionNameSuffix "-lokalise"
         }
     }
 }
@@ -26,7 +40,4 @@ dependencies {
     implementation('com.lokalise.android:sdk:2.1.1') {
         transitive = true
     }
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
