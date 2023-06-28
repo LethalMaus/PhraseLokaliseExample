@@ -1,0 +1,13 @@
+phraseapp:
+  access_token: <ACCESS_TOKEN>
+  project_id: <PROJECT_ID>
+  push:
+    sources:
+    - file: ./app/src/main/res/values/strings.xml
+      params:
+        file_format: xml
+  pull:
+    targets:
+    - file: ./app/src/main/res/values-<locale_code>/strings.xml
+      params:
+        file_format: xml
