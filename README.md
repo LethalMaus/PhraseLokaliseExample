@@ -69,8 +69,8 @@ To switch between the Phrase SDK and Lokalise SDK build variants, follow these s
 
 2. Select the desired build variant:
 
-  - phraseDebug: Build variant with the Phrase SDK implementation.
-  - lokaliseDebug: Build variant with the Lokalise SDK implementation.
+    - phraseDebug: Build variant with the Phrase SDK implementation.
+    - lokaliseDebug: Build variant with the Lokalise SDK implementation.
 
 3. Build and run the app on an emulator or physical device.
 
